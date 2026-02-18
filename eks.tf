@@ -3,7 +3,7 @@ module "eks" {
     version = "~>19.0"
 
     cluster_name                   = local.name
-    cluster_version                = "1.30"
+    cluster_version                = "1.34"
     cluster_endpoint_public_access = true
 
     cluster_addons = {
