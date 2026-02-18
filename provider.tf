@@ -18,7 +18,6 @@ provider "aws" {
 locals {
     region = "ap-south-2"
     name = "kg-cluster"
-    cluster_version = "1.30"
     vpc_cidr = "10.123.0.0/16"
     azs =["ap-south-2a", "ap-south-2b"]
     public_subnets = ["10.123.1.0/24", "10.123.2.0/24"]
