@@ -6,18 +6,18 @@ terraform {
         }
     }
     backend "s3" {
-        bucket = "<bucket-name>"
-        key    = "<folder/terraform.tfstate>"
-        region = "ap-south-1"
+        bucket = "1802-bucket"
+        key    = "terraform.tfstate"
+        region = "ap-south-2"
     }
 }
 provider "aws" {
-    region = "ap-south-1"
+    region = "ap-south-2"
 }
 
 locals {
-    region = "ap-south-1"
-    name = "<cluster_name>"
+    region = "ap-south-2"
+    name = "kg-cluster"
     vpc_cidr = "10.123.0.0/16"
     azs =["ap-south-1a", "ap-south-1b"]
     public_subnets = ["10.123.1.0/24", "10.123.2.0/24"]
